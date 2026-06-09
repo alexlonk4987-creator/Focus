@@ -27,6 +27,7 @@
             <li><a href="javascript:void(0)" onclick="mostrarSeccion('inicio')" class="nav-link active" data-section="inicio">Inicio</a></li>
             <li><a href="javascript:void(0)" onclick="mostrarSeccion('cursos')" class="nav-link" data-section="cursos">Cursos y Técnicas</a></li>
             <li><a href="javascript:void(0)" onclick="mostrarSeccion('lectura')" class="nav-link" data-section="lectura">Lectura</a></li>
+            <li><a href="javascript:void(0)" onclick="mostrarSeccion('gimnasia')" class="nav-link" data-section="gimnasia">Gimnasia Cerebral</a></li>
             <li><a href="javascript:void(0)" onclick="mostrarSeccion('tips')" class="nav-link" data-section="tips">Tips</a></li>
         </ul>
 
@@ -453,6 +454,85 @@
                 <p class="section-description">Técnicas avanzadas para maximizar tu comprensión y velocidad de lectura</p>
             </div>
             <div id="rl-container"></div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN GIMNASIA CEREBRAL -->
+    <section id="gimnasia" class="page-section">
+        <div class="section-bg gimnasia-bg"><div class="section-noise"></div></div>
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-kicker">// Ejercicios Mentales</span>
+                <h2>Entrena tu<br><em>cerebro</em></h2>
+                <p class="section-description">Ejercicios científicamente diseñados para potenciar memoria, agilidad mental y concentración</p>
+            </div>
+            <div id="gimnasia-container">
+                <div class="gimnasia-grid">
+                    <!-- Ejercicio 1: Memoria Numérica -->
+                    <div class="gimnasia-card liquid-glass">
+                        <div class="gimnasia-video-wrap">
+                            <video src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4" muted autoplay loop playsinline preload="auto"></video>
+                        </div>
+                        <div class="gimnasia-body">
+                            <h3 class="gimnasia-title">Memoria Numérica</h3>
+                            <p class="gimnasia-desc">Ejercita tu capacidad de memorizar secuencias numéricas con técnicas de visualización</p>
+                            <div class="gimnasia-meta">
+                                <span class="gimnasia-badge">Memoria</span>
+                                <span class="gimnasia-difficulty">Principiante</span>
+                            </div>
+                            <button class="gimnasia-btn" onclick="iniciarEjercicioGimnasia(1)">Comenzar →</button>
+                        </div>
+                    </div>
+
+                    <!-- Ejercicio 2: Agilidad Mental -->
+                    <div class="gimnasia-card liquid-glass">
+                        <div class="gimnasia-video-wrap">
+                            <video src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260324_151826_c7218672-6e92-402c-9e45-f1e0f454bdc4.mp4" muted autoplay loop playsinline preload="auto"></video>
+                        </div>
+                        <div class="gimnasia-body">
+                            <h3 class="gimnasia-title">Agilidad Mental</h3>
+                            <p class="gimnasia-desc">Resuelve acertijos lógicos para entrenar tu pensamiento rápido y flexible</p>
+                            <div class="gimnasia-meta">
+                                <span class="gimnasia-badge">Lógica</span>
+                                <span class="gimnasia-difficulty">Intermedio</span>
+                            </div>
+                            <button class="gimnasia-btn" onclick="iniciarEjercicioGimnasia(2)">Comenzar →</button>
+                        </div>
+                    </div>
+
+                    <!-- Ejercicio 3: Concentración Sostenida -->
+                    <div class="gimnasia-card liquid-glass">
+                        <div class="gimnasia-video-wrap">
+                            <video src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260402_054547_9875cfc5-155a-4229-8ec8-b7ba7125cbf8.mp4" muted autoplay loop playsinline preload="auto"></video>
+                        </div>
+                        <div class="gimnasia-body">
+                            <h3 class="gimnasia-title">Concentración Sostenida</h3>
+                            <p class="gimnasia-desc">Mantén el enfoque total en tareas complejas sin distracciones</p>
+                            <div class="gimnasia-meta">
+                                <span class="gimnasia-badge">Concentración</span>
+                                <span class="gimnasia-difficulty">Avanzado</span>
+                            </div>
+                            <button class="gimnasia-btn" onclick="iniciarEjercicioGimnasia(3)">Comenzar →</button>
+                        </div>
+                    </div>
+
+                    <!-- Ejercicio 4: Velocidad de Procesamiento -->
+                    <div class="gimnasia-card liquid-glass">
+                        <div class="gimnasia-video-wrap">
+                            <video src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4" muted autoplay loop playsinline preload="auto"></video>
+                        </div>
+                        <div class="gimnasia-body">
+                            <h3 class="gimnasia-title">Velocidad de Procesamiento</h3>
+                            <p class="gimnasia-desc">Desarrolla la capacidad de procesar información rápidamente y con precisión</p>
+                            <div class="gimnasia-meta">
+                                <span class="gimnasia-badge">Velocidad</span>
+                                <span class="gimnasia-difficulty">Principiante</span>
+                            </div>
+                            <button class="gimnasia-btn" onclick="iniciarEjercicioGimnasia(4)">Comenzar →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
