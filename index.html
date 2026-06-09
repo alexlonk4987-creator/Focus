@@ -515,10 +515,10 @@
                 <span class="footer-brand">FocusNova</span>
                 <div class="footer-socials">
                     <a href="#" class="footer-social-link" aria-label="Instagram">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="3"/><path d="M16 7h.01"/></svg>
                     </a>
                     <a href="#" class="footer-social-link" aria-label="Twitter">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.7 5.5 4.3 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15 3 9 8 8c-2.2-.1-4.3.5-5.2 2 2 1 4.1.5 6-.2-2.4-.1-4.2-1.5-4.5-3.5.5 0 1 0 1.5.1-2-1-3.8-2.5-3.8-4.5 0-.1 0-.2 0-.3.5.3 1.2.6 2 .6-2.9-2-2.1-7-1-9 5 6 10 15 15 16-1.4-2.7-.9-6-1-9 1-2 2-4 5-4.2z"/></svg>
                     </a>
                     <a href="#" class="footer-social-link" aria-label="Web">
                         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -571,14 +571,7 @@
 
 
     <!-- ════════════════════════════════════════════
-         SECCIÓN LECTURA — sin cambios
-    ════════════════════════════════════════════ -->
-    <!-- ════════════════════════════════════════════
-         SECCIÓN LECTURA — completa con 4 módulos:
-         1. Biblioteca Virtual (subir PDFs)
-         2. Seguimiento de Lectura (form + stats)
-         3. Notas de Lectura (form + lista)
-         4. Técnicas de Lectura (10 técnicas con progreso)
+         SECCIÓN LECTURA — SOLO TÉCNICAS DE LECTURA
     ════════════════════════════════════════════ -->
     <section id="lectura" class="page-section">
         <div class="section-bg lectura-bg"><div class="section-noise"></div></div>
@@ -588,231 +581,10 @@
             <div class="section-header">
                 <span class="section-kicker">// Lectura y Aprendizaje</span>
                 <h2>Lee mejor,<br><em>comprende más</em></h2>
-                <p class="section-description">Biblioteca virtual, seguimiento de lectura y técnicas para maximizar tu comprensión</p>
+                <p class="section-description">Técnicas de lectura científicamente probadas para maximizar tu comprensión</p>
             </div>
 
-            <!-- ── MÓDULO 1: MIS LIBROS ── -->
-            <div class="lec-module">
-                <div class="lec-module-header">
-                    <div class="lec-module-title">
-                        <div class="subsection-icon liquid-glass">
-                            <ion-icon name="library"></ion-icon>
-                        </div>
-                        <h3>Mis Libros</h3>
-                    </div>
-                    <!-- Contador de libros guardados -->
-                    <span class="badge" id="badge-libros">0 libros</span>
-                </div>
-
-                <!-- Formulario para agregar un libro nuevo -->
-                <div class="bl-form liquid-glass">
-                    <h4 class="bl-form-title">
-                        <ion-icon name="add-circle-outline"></ion-icon>
-                        Agregar libro
-                    </h4>
-
-                    <!-- Fila 1: título y autor -->
-                    <div class="bl-row">
-                        <div class="bl-field">
-                            <label>Título del libro *</label>
-                            <input type="text" id="bl-titulo" class="lec-input" placeholder="Ej: Hábitos Atómicos">
-                        </div>
-                        <div class="bl-field">
-                            <label>Autor</label>
-                            <input type="text" id="bl-autor" class="lec-input" placeholder="Ej: James Clear">
-                        </div>
-                    </div>
-
-                    <!-- Fila 2: categoría y páginas -->
-                    <div class="bl-row">
-                        <div class="bl-field">
-                            <label>Categoría</label>
-                            <select id="bl-categoria" class="lec-select">
-                                <option value="Sin categoría">Sin categoría</option>
-                                <option value="Autoayuda">Autoayuda</option>
-                                <option value="Ciencia">Ciencia</option>
-                                <option value="Historia">Historia</option>
-                                <option value="Literatura">Literatura</option>
-                                <option value="Matemáticas">Matemáticas</option>
-                                <option value="Negocios">Negocios</option>
-                                <option value="Psicología">Psicología</option>
-                                <option value="Tecnología">Tecnología</option>
-                                <option value="Otro">Otro</option>
-                            </select>
-                        </div>
-                        <div class="bl-field">
-                            <label>Páginas totales</label>
-                            <input type="number" id="bl-paginas" class="lec-input" placeholder="Ej: 320" min="1">
-                        </div>
-                    </div>
-
-                    <!-- Fila 3: fecha inicio y fecha fin -->
-                    <div class="bl-row">
-                        <div class="bl-field">
-                            <label>Fecha de inicio</label>
-                            <input type="date" id="bl-fecha-inicio" class="lec-input">
-                        </div>
-                        <div class="bl-field">
-                            <label>Fecha de fin (opcional)</label>
-                            <input type="date" id="bl-fecha-fin" class="lec-input">
-                        </div>
-                    </div>
-
-                    <!-- Calificación con estrellas -->
-                    <div class="bl-field">
-                        <label>Calificación personal</label>
-                        <div class="bl-stars" id="bl-stars">
-                            <span class="bl-star" data-val="1" onclick="blSetStar(1)">★</span>
-                            <span class="bl-star" data-val="2" onclick="blSetStar(2)">★</span>
-                            <span class="bl-star" data-val="3" onclick="blSetStar(3)">★</span>
-                            <span class="bl-star" data-val="4" onclick="blSetStar(4)">★</span>
-                            <span class="bl-star" data-val="5" onclick="blSetStar(5)">★</span>
-                        </div>
-                    </div>
-
-                    <button class="lec-btn-primary" onclick="blAgregarLibro()">
-                        <ion-icon name="add"></ion-icon> Agregar libro
-                    </button>
-                </div>
-
-                <!-- Lista de libros guardados -->
-                <div id="bl-lista" class="bl-lista">
-                    <div class="libros-empty" id="bl-empty">
-                        <ion-icon name="book-outline"></ion-icon>
-                        <p>No hay libros aún. ¡Agrega tu primer libro!</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- ── MÓDULO 2: SEGUIMIENTO DE LECTURA ── -->
-            <div class="lec-module">
-                <div class="lec-module-header">
-                    <div class="lec-module-title">
-                        <div class="subsection-icon liquid-glass">
-                            <ion-icon name="stats-chart"></ion-icon>
-                        </div>
-                        <h3>Seguimiento de Lectura</h3>
-                    </div>
-                    <span class="badge">Progreso</span>
-                </div>
-
-                <div class="lec-two-col">
-
-                    <!-- Formulario de seguimiento -->
-                    <div class="lec-form liquid-glass">
-                        <div class="lec-form-group">
-                            <label>Libro</label>
-                            <select id="libro-select" class="lec-select">
-                                <option value="">— Selecciona un libro —</option>
-                            </select>
-                        </div>
-                        <div class="lec-form-row">
-                            <div class="lec-form-group">
-                                <label>Fecha inicio</label>
-                                <input type="date" id="fecha-inicio" class="lec-input">
-                            </div>
-                            <div class="lec-form-group">
-                                <label>Fecha fin</label>
-                                <input type="date" id="fecha-fin" class="lec-input">
-                            </div>
-                        </div>
-                        <div class="lec-form-row">
-                            <div class="lec-form-group">
-                                <label>Tiempo diario (min)</label>
-                                <input type="number" id="tiempo-diario" min="0" max="480" placeholder="30" class="lec-input">
-                            </div>
-                            <div class="lec-form-group">
-                                <label>Páginas totales</label>
-                                <input type="number" id="paginas-total" min="0" placeholder="300" class="lec-input">
-                            </div>
-                        </div>
-                        <div class="lec-form-group">
-                            <label>Progreso: <span id="progreso-valor" class="progreso-label">0%</span></label>
-                            <div class="lec-range-wrap">
-                                <input type="range" id="progreso-rango" min="0" max="100" value="0" class="lec-range"
-                                    oninput="document.getElementById('progreso-valor').textContent = this.value + '%'">
-                                <div class="lec-range-track">
-                                    <div id="progreso-fill" class="lec-range-fill"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="lec-btn-primary" onclick="guardarSeguimiento()">
-                            <ion-icon name="save"></ion-icon> Guardar seguimiento
-                        </button>
-                    </div>
-
-                    <!-- Stats de lectura -->
-                    <div class="lec-stats-col">
-                        <div class="lec-stat-card liquid-glass">
-                            <div class="lec-stat-icon"><ion-icon name="book"></ion-icon></div>
-                            <span class="lec-stat-num" id="stat-libros">0</span>
-                            <span class="lec-stat-label">Libros Leídos</span>
-                        </div>
-                        <div class="lec-stat-card liquid-glass">
-                            <div class="lec-stat-icon"><ion-icon name="timer"></ion-icon></div>
-                            <span class="lec-stat-num" id="stat-horas">0h</span>
-                            <span class="lec-stat-label">Horas Totales</span>
-                        </div>
-                        <div class="lec-stat-card liquid-glass">
-                            <div class="lec-stat-icon"><ion-icon name="document-text"></ion-icon></div>
-                            <span class="lec-stat-num" id="stat-paginas">0</span>
-                            <span class="lec-stat-label">Páginas Leídas</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ── MÓDULO 3: NOTAS DE LECTURA ── -->
-            <div class="lec-module">
-                <div class="lec-module-header">
-                    <div class="lec-module-title">
-                        <div class="subsection-icon liquid-glass">
-                            <ion-icon name="create"></ion-icon>
-                        </div>
-                        <h3>Notas de Lectura</h3>
-                    </div>
-                    <span class="badge" id="badge-notas">0 notas</span>
-                </div>
-
-                <div class="lec-two-col">
-
-                    <!-- Formulario de nota -->
-                    <div class="lec-form liquid-glass">
-                        <div class="lec-form-group">
-                            <label>Libro</label>
-                            <select id="libro-nota" class="lec-select">
-                                <option value="">— Selecciona un libro —</option>
-                            </select>
-                        </div>
-                        <div class="lec-form-group">
-                            <label>Página</label>
-                            <input type="number" id="pagina-nota" min="0" placeholder="45" class="lec-input">
-                        </div>
-                        <div class="lec-form-group">
-                            <label>Tu nota</label>
-                            <textarea id="texto-nota" rows="4" class="lec-textarea"
-                                placeholder="¿Qué aprendiste? ¿Cómo se relaciona con lo que ya sabías?"></textarea>
-                        </div>
-                        <button class="lec-btn-primary" onclick="guardarNota()">
-                            <ion-icon name="add"></ion-icon> Guardar nota
-                        </button>
-                    </div>
-
-                    <!-- Lista de notas guardadas -->
-                    <div class="notas-lista">
-                        <h4 class="libros-title">Mis Notas</h4>
-                        <div id="notas-container" class="notas-container">
-                            <div class="libros-empty">
-                                <ion-icon name="create-outline"></ion-icon>
-                                <p>No hay notas aún. ¡Crea tu primera nota!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ── MÓDULO 4: TÉCNICAS DE LECTURA ── -->
+            <!-- ── MÓDULO: TÉCNICAS DE LECTURA ── -->
             <div class="lec-module">
                 <div class="lec-module-header">
                     <div class="lec-module-title">
@@ -823,7 +595,7 @@
                     </div>
                     <div class="lec-progress-wrap">
                         <span class="lec-progress-text">
-                            <span id="tec-count">0</span>/5 completadas
+                            <span id="tec-count">0</span>/3 completadas
                         </span>
                         <div class="lec-progress-bar">
                             <div id="tec-progress-fill" class="lec-progress-fill"></div>
@@ -832,159 +604,7 @@
                 </div>
 
                 <div id="rl-container"><!-- contenido generado por fn_reading.js --></div>
-                <div class="tecnicas-lec-grid" style="display:none">
 
-                    <div class="tecnica-lec liquid-glass" data-tecnica="Skimming">
-                        <div class="tl-header">
-                            <div class="tl-num">01</div>
-                            <h4>Skimming</h4>
-                            <label class="tl-check-wrap">
-                                <input type="checkbox" class="tl-check" onchange="actualizarProgresoLectura()">
-                                <span class="tl-check-visual"></span>
-                            </label>
-                        </div>
-                        <p>Hojea rápidamente para obtener la idea general del texto.</p>
-                        <button class="tl-btn" onclick="iniciarTecnica(this)">
-                            <ion-icon name="play"></ion-icon> Comenzar
-                        </button>
-                    </div>
-
-                    <div class="tecnica-lec liquid-glass" data-tecnica="Scanning">
-                        <div class="tl-header">
-                            <div class="tl-num">02</div>
-                            <h4>Scanning</h4>
-                            <label class="tl-check-wrap">
-                                <input type="checkbox" class="tl-check" onchange="actualizarProgresoLectura()">
-                                <span class="tl-check-visual"></span>
-                            </label>
-                        </div>
-                        <p>Busca información específica de forma rápida y precisa.</p>
-                        <button class="tl-btn" onclick="iniciarTecnica(this)">
-                            <ion-icon name="play"></ion-icon> Comenzar
-                        </button>
-                    </div>
-
-                    <div class="tecnica-lec liquid-glass" data-tecnica="SQ3R Aplicado">
-                        <div class="tl-header">
-                            <div class="tl-num">03</div>
-                            <h4>SQ3R Aplicado</h4>
-                            <label class="tl-check-wrap">
-                                <input type="checkbox" class="tl-check" onchange="actualizarProgresoLectura()">
-                                <span class="tl-check-visual"></span>
-                            </label>
-                        </div>
-                        <p>Survey, Question, Read, Recite, Review para máxima retención.</p>
-                        <button class="tl-btn" onclick="iniciarTecnica(this)">
-                            <ion-icon name="play"></ion-icon> Comenzar
-                        </button>
-                    </div>
-
-                    <div class="tecnica-lec liquid-glass" data-tecnica="Lectura Crítica">
-                        <div class="tl-header">
-                            <div class="tl-num">04</div>
-                            <h4>Lectura Crítica</h4>
-                            <label class="tl-check-wrap">
-                                <input type="checkbox" class="tl-check" onchange="actualizarProgresoLectura()">
-                                <span class="tl-check-visual"></span>
-                            </label>
-                        </div>
-                        <p>Analiza, cuestiona y evalúa el contenido mientras lees.</p>
-                        <button class="tl-btn" onclick="iniciarTecnica(this)">
-                            <ion-icon name="play"></ion-icon> Comenzar
-                        </button>
-                    </div>
-
-                    <div class="tecnica-lec liquid-glass" data-tecnica="Anotaciones">
-                        <div class="tl-header">
-                            <div class="tl-num">05</div>
-                            <h4>Anotaciones</h4>
-                            <label class="tl-check-wrap">
-                                <input type="checkbox" class="tl-check" onchange="actualizarProgresoLectura()">
-                                <span class="tl-check-visual"></span>
-                            </label>
-                        </div>
-                        <p>Usa símbolos y códigos personales para marcar el texto.</p>
-                        <button class="tl-btn" onclick="iniciarTecnica(this)">
-                            <ion-icon name="play"></ion-icon> Comenzar
-                        </button>
-                    </div>
-
-                    <div class="tecnica-lec liquid-glass" data-tecnica="Lectura Activa">
-                        <div class="tl-header">
-                            <div class="tl-num">06</div>
-                            <h4>Lectura Activa</h4>
-                            <label class="tl-check-wrap">
-                                <input type="checkbox" class="tl-check" onchange="actualizarProgresoLectura()">
-                                <span class="tl-check-visual"></span>
-                            </label>
-                        </div>
-                        <p>Hazte preguntas sobre el contenido mientras avanzas.</p>
-                        <button class="tl-btn" onclick="iniciarTecnica(this)">
-                            <ion-icon name="play"></ion-icon> Comenzar
-                        </button>
-                    </div>
-
-                    <div class="tecnica-lec liquid-glass" data-tecnica="Mapas Conceptuales">
-                        <div class="tl-header">
-                            <div class="tl-num">07</div>
-                            <h4>Mapas Conceptuales</h4>
-                            <label class="tl-check-wrap">
-                                <input type="checkbox" class="tl-check" onchange="actualizarProgresoLectura()">
-                                <span class="tl-check-visual"></span>
-                            </label>
-                        </div>
-                        <p>Crea diagramas visuales para organizar el contenido.</p>
-                        <button class="tl-btn" onclick="iniciarTecnica(this)">
-                            <ion-icon name="play"></ion-icon> Comenzar
-                        </button>
-                    </div>
-
-                    <div class="tecnica-lec liquid-glass" data-tecnica="Lectura en Voz Alta">
-                        <div class="tl-header">
-                            <div class="tl-num">08</div>
-                            <h4>Lectura en Voz Alta</h4>
-                            <label class="tl-check-wrap">
-                                <input type="checkbox" class="tl-check" onchange="actualizarProgresoLectura()">
-                                <span class="tl-check-visual"></span>
-                            </label>
-                        </div>
-                        <p>Lee en voz alta para activar múltiples sentidos a la vez.</p>
-                        <button class="tl-btn" onclick="iniciarTecnica(this)">
-                            <ion-icon name="play"></ion-icon> Comenzar
-                        </button>
-                    </div>
-
-                    <div class="tecnica-lec liquid-glass" data-tecnica="PQ4R">
-                        <div class="tl-header">
-                            <div class="tl-num">09</div>
-                            <h4>PQ4R</h4>
-                            <label class="tl-check-wrap">
-                                <input type="checkbox" class="tl-check" onchange="actualizarProgresoLectura()">
-                                <span class="tl-check-visual"></span>
-                            </label>
-                        </div>
-                        <p>Preview · Question · Read · Reflect · Recite · Review.</p>
-                        <button class="tl-btn" onclick="iniciarTecnica(this)">
-                            <ion-icon name="play"></ion-icon> Comenzar
-                        </button>
-                    </div>
-
-                    <div class="tecnica-lec liquid-glass" data-tecnica="Descanso Consciente">
-                        <div class="tl-header">
-                            <div class="tl-num">10</div>
-                            <h4>Descanso Consciente</h4>
-                            <label class="tl-check-wrap">
-                                <input type="checkbox" class="tl-check" onchange="actualizarProgresoLectura()">
-                                <span class="tl-check-visual"></span>
-                            </label>
-                        </div>
-                        <p>Toma pausas activas para procesar y consolidar información.</p>
-                        <button class="tl-btn" onclick="iniciarTecnica(this)">
-                            <ion-icon name="play"></ion-icon> Comenzar
-                        </button>
-                    </div>
-
-                </div>
             </div>
 
         </div>
@@ -999,68 +619,49 @@
         <div class="section-inner">
             <div class="section-header">
                 <span class="section-kicker">// Gimnasia Cerebral</span>
-                <h2>Entrena tu<br><em>cerebro</em></h2>
-                <p class="section-description">Ejercicios y actividades para potenciar tu capacidad cognitiva</p>
+                <h2>Entrena tu<br><em>mente</em></h2>
+                <p class="section-description">Ejercicios prácticos para desarrollar concentración, memoria y agilidad mental</p>
             </div>
-            <div class="video-grid">
-                <div class="video-card liquid-glass"><div class="video-thumb"><iframe src="https://www.youtube.com/embed/h1OG2qz1Fkk?si=HwDVwWuhd5ryO8rF" title="YouTube video player" title="V7" frameborder="0" allowfullscreen></iframe></div><div class="video-details"><span class="video-num">01</span><h4>Video 1: ¿Que es la gimnasia cerebral?</h4><p>Descripción del contenido...</p><span class="video-duration"><ion-icon name="time"></ion-icon> --:-- min</span></div></div>
-                <div class="video-card liquid-glass"><div class="video-thumb"><iframe src="https://www.youtube.com/embed/Vwnc13Q3vFI?si=zmCfG6ZPk49jXv63" title="YouTube video player" title="V8" frameborder="0" allowfullscreen></iframe></div><div class="video-details"><span class="video-num">02</span><h4>Video 8: Técnica a Aprender</h4><p>Descripción del contenido...</p><span class="video-duration"><ion-icon name="time"></ion-icon> --:-- min</span></div></div>
-                <div class="video-card liquid-glass"><div class="video-thumb"><iframe src="https://www.youtube.com/embed/iHPOUQtSMwQ?si=7tqS12TKeY9-JNJ7" title="YouTube video player" frameborder="0" title="V9" frameborder="0" allowfullscreen></iframe></div><div class="video-details"><span class="video-num">03</span><h4>Video 9: Técnica a Aprender</h4><p>Descripción del contenido...</p><span class="video-duration"><ion-icon name="time"></ion-icon> --:-- min</span></div></div>
-                <div class="video-card liquid-glass"><div class="video-thumb"><iframe src="https://www.youtube.com/embed/oB5UxxqMT4g?si=2fhcIuF3LGaHLiuz" title="YouTube video player" title="V10" frameborder="0" allowfullscreen></iframe></div><div class="video-details"><span class="video-num">04</span><h4>Video 10: Técnica a Aprender</h4><p>Descripción del contenido...</p><span class="video-duration"><ion-icon name="time"></ion-icon> --:-- min</span></div></div>
-                <div class="video-card liquid-glass"><div class="video-thumb"><iframe src="https://www.youtube.com/embed/oj68WyVtFi0?si=HtqYIJ0Vbqkw1OZP" title="V11" frameborder="0" allowfullscreen></iframe></div><div class="video-details"><span class="video-num">05</span><h4>Video 11: Técnica a Aprender</h4><p>Descripción del contenido...</p><span class="video-duration"><ion-icon name="time"></ion-icon> --:-- min</span></div></div>
-                <div class="video-card liquid-glass"><div class="video-thumb"><iframe src="https://www.youtube.com/embed/oIwyPvZCKwE?si=6zubmEbib2t-vF_B" title="V12" frameborder="0" allowfullscreen></iframe></div><div class="video-details"><span class="video-num">06</span><h4>Video 12: Técnica a Aprender</h4><p>Descripción del contenido...</p><span class="video-duration"><ion-icon name="time"></ion-icon> --:-- min</span></div></div>
-                <div class="video-card liquid-glass"><div class="video-thumb"><iframe src="https://www.youtube.com/embed/ds1FvXa7Xgw?si=u_00T_HN_usny41e" title="V13" frameborder="0" allowfullscreen></iframe></div><div class="video-details"><span class="video-num">07</span><h4>Video 13: Técnica a Aprender</h4><p>Descripción del contenido...</p><span class="video-duration"><ion-icon name="time"></ion-icon> --:-- min</span></div></div>
-                <div class="video-card liquid-glass"><div class="video-thumb"><iframe src="https://www.youtube.com/embed/-CIbtmVcA_w?si=UewQdm1uRlqrzJIz" title="V14" frameborder="0" allowfullscreen></iframe></div><div class="video-details"><span class="video-num">08</span><h4>Video 14: Técnica a Aprender</h4><p>Descripción del contenido...</p><span class="video-duration"><ion-icon name="time"></ion-icon> --:-- min</span></div></div>
-                <div class="video-card liquid-glass"><div class="video-thumb"><iframe src="https://www.youtube.com/embed/czaJdREapTQ?si=5tqynbXmGksfQOTU" title="V15" frameborder="0" allowfullscreen></iframe></div><div class="video-details"><span class="video-num">09</span><h4>Video 15: Técnica a Aprender</h4><p>Descripción del contenido...</p><span class="video-duration"><ion-icon name="time"></ion-icon> --:-- min</span></div></div>
+
+            <div id="fn-gimnasia-container">
+                <div style="text-align:center;padding:4rem 1rem;color:var(--muted)">
+                    <div style="font-size:2rem;margin-bottom:1rem">🧠</div>
+                    <div style="font-size:.9rem">Cargando ejercicios...</div>
+                </div>
             </div>
+
         </div>
     </section><!-- /gimnasia -->
 
 
     <!-- ════════════════════════════════════════════
-         SECCIÓN TIPS DIARIOS — sin cambios
+         SECCIÓN TIPS — sin cambios
     ════════════════════════════════════════════ -->
     <section id="tips" class="page-section">
         <div class="section-bg tips-bg"><div class="section-noise"></div></div>
         <div class="section-inner">
+
             <div class="section-header">
                 <span class="section-kicker">// Tips Diarios</span>
-                <h2>Tip del<br><em>Día</em></h2>
-                <p class="section-description">Consejo diario para mejorar tu concentración y aprendizaje</p>
+                <h2>Consejos de<br><em>estudio</em></h2>
+                <p class="section-description">Estrategias prácticas para mejorar tu rendimiento académico y productividad</p>
             </div>
-            <div class="tip-display">
-                <div class="tip-card liquid-glass-strong">
-                    <div class="tip-icon-wrap"><ion-icon name="bulb"></ion-icon></div>
-                    <div class="tip-body">
-                        <h3 id="tip-title">Cargando tu tip...</h3>
-                        <p id="tip-desc">Por favor espera mientras cargamos tu inspiración del día...</p>
-                        <div class="tip-meta">
-                            <span id="tip-cat" class="tip-badge liquid-glass">General</span>
-                            <span id="tip-time" class="tip-badge liquid-glass">2 min</span>
-                        </div>
-                    </div>
+
+            <div id="fn-tips-container">
+                <div style="text-align:center;padding:4rem 1rem;color:var(--muted)">
+                    <div style="font-size:2rem;margin-bottom:1rem">💡</div>
+                    <div style="font-size:.9rem">Cargando tips...</div>
                 </div>
-                <button class="btn-tip liquid-glass" onclick="generarNuevoTip()">
-                    <ion-icon name="refresh"></ion-icon>
-                    Otro Tip
-                </button>
             </div>
-            <div class="tips-note">
-                <ion-icon name="information-circle"></ion-icon>
-                <p>Cada vez que visitas la página, recibes un tip diferente. ¡Vuelve mañana para más inspiración!</p>
-            </div>
+
         </div>
     </section><!-- /tips -->
 
+</main>
 
-</main><!-- /main-content -->
-
-
-<!-- ══════════════════════════════════════════════════
-     MODAL DE CURSO — overlay global
-══════════════════════════════════════════════════ -->
-<div id="modal-curso" class="modal-overlay" onclick="cerrarModal(event)">
-    <div class="modal-content liquid-glass-strong">
+<!-- Modal para detalles de cursos (si es necesario) -->
+<div id="modal-curso" class="modal" onclick="cerrarModal(event)">
+    <div class="modal-content">
         <button class="modal-close" onclick="cerrarModalBtn()">
             <ion-icon name="close"></ion-icon>
         </button>
@@ -1068,8 +669,10 @@
     </div>
 </div>
 
+<!-- Importar scripts -->
 <script src="script.js"></script>
-    <script src="fn_courses.js"></script>
-    <script src="fn_reading.js"></script>
+<script src="fn_courses.js"></script>
+<script src="fn_reading.js"></script>
+
 </body>
 </html>
